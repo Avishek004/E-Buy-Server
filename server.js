@@ -24,10 +24,6 @@ app.use(morgan("dev"));
 app.use(bodyParser.json({ limit: "2mb" }));
 app.use(cors());
 
-app.get("/", (req, res) => {
-    res.send("I am creating a database for my e-commerce application")
-})
-
 
 // routes middleware
 readdirSync("./routes").map((route) => app.use("/", require("./routes/" + route)));
