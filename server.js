@@ -26,7 +26,7 @@ app.use(cors());
 
 
 // routes middleware
-readdirSync("./routes").map((route) => app.use("/", require("./routes/" + route)));
+readdirSync("./Routes").map((route) => app.use("/", require("./Routes/" + route)));
 
 
 // Port
